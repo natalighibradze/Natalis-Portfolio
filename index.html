@@ -1,255 +1,1114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natali Ghibradze</title>
-  <style>
-    :root{
-      --bg:#0c1220;
-      --bg-soft:#111a2c;
-      --gold:#c9a24b;
-      --text:#f2efe9;
-      --text-dim:#a9b1c3;
-      --line:#26314a;
-    }
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:'Georgia','Times New Roman',serif;
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:24px 48px;
-      border-bottom:1px solid var(--line);
-      font-family:Arial,Helvetica,sans-serif;
-      position:sticky;
-      top:0;
-      background:var(--bg);
-      z-index:100;
-    }
-    .nav .brand{
-      font-family:'Georgia',serif;
-      font-size:1.25rem;
-      letter-spacing:.02em;
-    }
-    .nav .links{
-      display:flex;
-      gap:28px;
-      font-size:.72rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:var(--text-dim);
-    }
-    .nav .links a{color:var(--text-dim);text-decoration:none;}
-    .nav .links a:hover{color:var(--gold);}
-    .nav .resume-btn{
-      background:var(--gold);
-      color:#1a1408;
-      padding:10px 18px;
-      font-size:.72rem;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      font-weight:bold;
-      text-decoration:none;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natali Ghibradze | Enterprise Customer Success Manager</title>
+<meta name="description" content="Natali Ghibradze — Mid-Market & Upmarket Customer Success Manager. $1.5M ARR portfolio, 50+ key accounts, trilingual EN/RUS/ZH.">
 
-    .hero{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:60px;
-      padding:80px 48px 100px;
-      max-width:1300px;
-      margin:0 auto;
-      flex-wrap:wrap;
-    }
-    .hero-text{flex:1 1 420px;min-width:320px;}
-    .eyebrow{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      font-family:Arial,Helvetica,sans-serif;
-      font-size:.75rem;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      color:var(--gold);
-      margin-bottom:28px;
-    }
-    .eyebrow .rule{width:38px;height:1px;background:var(--gold);display:inline-block;}
-    h1.name{
-      margin:0;
-      font-weight:400;
-      font-style:italic;
-      font-size:3.6rem;
-      line-height:1.05;
-    }
-    h1.name .last{
-      display:block;
-      font-style:normal;
-      font-weight:700;
-      font-size:3.6rem;
-    }
-    .subline{
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text-dim);
-      font-size:1rem;
-      margin-top:28px;
-    }
-    .subline.langs{
-      color:var(--gold);
-      margin-top:6px;
-    }
-    .cta-row{
-      display:flex;
-      gap:14px;
-      margin-top:38px;
-      flex-wrap:wrap;
-      font-family:Arial,Helvetica,sans-serif;
-    }
-    .btn{
-      padding:15px 26px;
-      font-size:.75rem;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      text-decoration:none;
-      cursor:pointer;
-      border:1px solid var(--line);
-      color:var(--text);
-      background:transparent;
-    }
-    .btn.primary{
-      background:var(--gold);
-      color:#1a1408;
-      font-weight:bold;
-      border-color:var(--gold);
-    }
-    .btn:hover{border-color:var(--gold);}
+<meta property="og:type" content="website">
+<meta property="og:title" content="Natali Ghibradze | Enterprise Customer Success Manager">
+<meta property="og:description" content="Mid-Market & Upmarket CSM · B2B · $1.5M ARR Portfolio. Case studies, systems built, and how I work.">
+<meta property="og:image" content="https://natalighibradze.github.io/Natalis-Portfolio/natali-photo.jpg">
+<meta property="og:url" content="https://natalighibradze.github.io/Natalis-Portfolio/">
 
-    .hero-photo{
-      flex:0 0 auto;
-      width:340px;
-      height:410px;
-      border:1px solid var(--gold);
-      padding:10px;
-      cursor:pointer;
-    }
-    .hero-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    /* Modal for picture preview */
-    .modal{
-      display:none;
-      position:fixed;
-      z-index:200;
-      left:0;
-      top:0;
-      width:100%;
-      height:100%;
-      background-color:rgba(0,0,0,0.85);
-      align-items:center;
-      justify-content:center;
-    }
-    .modal img{
-      max-width:90%;
-      max-height:90%;
-      border:2px solid var(--gold);
-    }
-
-    .about, .cs-section, .systems-section, .how-section, .ind-section, .tools-section, .contact-section {
-      padding-top: 100px;
-    }
-  </style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Natali Ghibradze | Enterprise Customer Success Manager">
+<meta name="twitter:description" content="Mid-Market & Upmarket CSM · B2B · $1.5M ARR Portfolio.">
+<meta name="twitter:image" content="https://natalighibradze.github.io/Natalis-Portfolio/natali-photo.jpg">
 </head>
 <body>
+<style>
+  :root{
+    --bg:#0c1220;
+    --bg-soft:#111a2c;
+    --gold:#c9a24b;
+    --text:#f2efe9;
+    --text-dim:#a9b1c3;
+    --line:#26314a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Georgia','Times New Roman',serif;
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:24px 48px;
+    border-bottom:1px solid var(--line);
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .nav .brand{
+    font-family:'Georgia',serif;
+    font-size:1.25rem;
+    letter-spacing:.02em;
+  }
+  .nav .links{
+    display:flex;
+    gap:28px;
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  .nav .links a{color:var(--text-dim);text-decoration:none;}
+  .nav .links a:hover{color:var(--gold);}
+  .nav .resume-btn{
+    background:var(--gold);
+    color:#1a1408;
+    padding:10px 18px;
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
 
-  <div class="nav">
-    <div class="brand">Natali Ghibradze</div>
-    <div class="links">
-      <a href="#about-me">About</a>
-      <a href="#case-studies">Case Studies</a>
-      <a href="#systems">Systems</a>
-      <a href="#approach">Approach</a>
-      <a href="#industries">Industries</a>
-      <a href="#tools">Tools</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="#contact" class="resume-btn">Resume</a>
+  .hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:80px 48px 100px;
+    max-width:1300px;
+    margin:0 auto;
+    flex-wrap:wrap;
+  }
+  .hero-text{flex:1 1 420px;min-width:320px;}
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.75rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:28px;
+  }
+  .eyebrow .rule{width:38px;height:1px;background:var(--gold);display:inline-block;}
+  h1.name{
+    margin:0;
+    font-weight:400;
+    font-style:italic;
+    font-size:3.6rem;
+    line-height:1.05;
+  }
+  h1.name .last{
+    display:block;
+    font-style:normal;
+    font-weight:700;
+    font-size:3.6rem;
+  }
+  .subline{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text-dim);
+    font-size:1rem;
+    margin-top:28px;
+  }
+  .subline.langs{
+    color:var(--gold);
+    margin-top:6px;
+  }
+  .cta-row{
+    display:flex;
+    gap:14px;
+    margin-top:38px;
+    flex-wrap:wrap;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .btn{
+    padding:15px 26px;
+    font-size:.75rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid var(--line);
+    color:var(--text);
+    background:transparent;
+  }
+  .btn.primary{
+    background:var(--gold);
+    color:#1a1408;
+    font-weight:bold;
+    border-color:var(--gold);
+  }
+  .btn:hover{border-color:var(--gold);}
+
+  .hero-photo{
+    flex:0 0 auto;
+    width:340px;
+    height:410px;
+    border:1px solid var(--gold);
+    padding:10px;
+  }
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  @media (max-width:700px){
+    .nav .links{display:none;}
+    h1.name, h1.name .last{font-size:2.6rem;}
+    .hero{padding:48px 24px 64px;}
+    .hero-photo{width:100%;height:340px;}
+  }
+
+  .stats{
+    display:flex;
+    flex-wrap:wrap;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--bg-soft);
+  }
+  .stat{
+    flex:1 1 180px;
+    text-align:center;
+    padding:40px 20px;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{border-right:none;}
+  .stat-num{
+    font-size:2.2rem;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .stat-label{
+    margin-top:8px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.68rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  @media (max-width:700px){
+    .stat{flex:1 1 50%;border-bottom:1px solid var(--line);}
+  }
+
+  .about{
+    max-width:1000px;
+    margin:0 auto;
+    padding:100px 48px 110px;
+  }
+  .about h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0 0 40px;
+  }
+  .about h2 b{font-weight:700;}
+  .about p{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1.02rem;
+    line-height:1.75;
+    color:var(--text-dim);
+    margin:0 0 24px;
+    max-width:820px;
+  }
+  .quote-block{
+    border-left:3px solid var(--gold);
+    background:var(--bg-soft);
+    padding:36px 40px;
+    margin-top:48px;
+  }
+  .quote-block p{
+    font-family:'Georgia',serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:var(--text);
+    margin:0 0 16px;
+    line-height:1.5;
+  }
+  .quote-block .attribution{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.75rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  @media (max-width:700px){
+    .about{padding:64px 24px 72px;}
+    .about h2{font-size:2rem;}
+    .quote-block{padding:28px 24px;}
+    .quote-block p{font-size:1.15rem;}
+  }
+
+  .cards-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-top:20px;
+  }
+  .card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    padding:32px 28px;
+  }
+  .card .icon{font-size:1.8rem;margin-bottom:18px;display:block;}
+  .card h3{
+    font-size:1.15rem;
+    font-weight:700;
+    margin:0 0 14px;
+  }
+  .card p{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.92rem;
+    line-height:1.65;
+    color:var(--text-dim);
+    margin:0;
+  }
+  @media (max-width:900px){
+    .cards-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:700px){
+    .cards-section{padding:0 24px 72px;}
+    .cards-grid{grid-template-columns:1fr;}
+  }
+
+  .cs-section{
+    max-width:1000px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .cs-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0;
+  }
+  .cs-section .section-sub{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text-dim);
+    font-size:.95rem;
+    margin:16px 0 40px;
+  }
+  .cs-card{
+    border:1px solid var(--line);
+    background:var(--bg-soft);
+    margin-bottom:18px;
+    border-radius:4px;
+    overflow:hidden;
+    position:relative;
+    padding-left:5px;
+  }
+  .cs-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:5px;
+    background:rgb(196,74,74);
+  }
+  .cs-card.tag-blue::before{background:rgb(59,125,216);}
+  .cs-tag.tag-blue{
+    color:rgb(130,177,255);
+    background:rgba(59,125,216,0.15);
+    border-color:rgba(59,125,216,0.3);
+  }
+  .cs-card.tag-green::before{background:rgb(74,156,111);}
+  .cs-tag.tag-green{
+    color:rgb(128,203,196);
+    background:rgba(74,156,111,0.15);
+    border-color:rgba(74,156,111,0.3);
+  }
+  .cs-card.tag-purple::before{background:rgb(155,89,182);}
+  .cs-tag.tag-purple{
+    color:rgb(206,147,216);
+    background:rgba(155,89,182,0.15);
+    border-color:rgba(155,89,182,0.3);
+  }
+  .cs-card.tag-gold::before{background:rgb(196,151,74);}
+  .cs-tag.tag-gold{
+    color:rgb(232,185,106);
+    background:rgba(196,151,74,0.15);
+    border-color:rgba(196,151,74,0.3);
+  }
+  .cs-card summary{
+    list-style:none;
+    cursor:pointer;
+    padding:26px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .cs-card summary::-webkit-details-marker{display:none;}
+  .cs-tag{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.26px;
+    color:rgb(239,154,154);
+    background:rgba(196,74,74,0.15);
+    border:1px solid rgba(196,74,74,0.3);
+    border-radius:2px;
+    padding:4px 10px;
+    display:inline-block;
+    margin-bottom:12px;
+  }
+  .cs-title{
+    font-size:1.15rem;
+    font-weight:700;
+    margin:0;
+  }
+  .cs-toggle{
+    font-size:1.4rem;
+    color:var(--gold);
+    flex:0 0 auto;
+  }
+  .cs-card[open] .cs-toggle{transform:rotate(45deg);}
+  .cs-body{
+    padding:0 30px 30px;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .cs-body p{
+    color:var(--text-dim);
+    font-size:.95rem;
+    line-height:1.7;
+    margin:0 0 22px;
+  }
+  .cs-results{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  .cs-results li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:rgb(104,196,144);
+    background:rgba(74,156,111,0.1);
+    border:1px solid rgba(74,156,111,0.2);
+    border-radius:3px;
+    padding:10px 14px;
+    font-size:.85rem;
+    line-height:1.5;
+  }
+  .cs-results li::before{
+    content:"\2192";
+    color:rgb(74,156,111);
+    font-weight:700;
+    flex:0 0 auto;
+  }
+  @media (max-width:700px){
+    .cs-section{padding:0 24px 72px;}
+    .cs-card summary{padding:20px;}
+    .cs-body{padding:0 20px 24px;}
+  }
+
+  .systems-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .systems-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0;
+  }
+  .sys-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-top:20px;
+  }
+  .sys-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:30px;
+    transition:border-color .2s, transform .2s;
+  }
+  .sys-card:hover{border-color:rgba(196,151,74,.35);transform:translateY(-3px);}
+  .sys-icon{font-size:28px;margin-bottom:16px;display:block;}
+  .sys-icon-svg{line-height:0;}
+  .sys-card h3{
+    font-family:'Georgia',serif;
+    font-size:19px;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .sys-card p{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:13px;
+    color:var(--text-dim);
+    line-height:1.7;
+    margin:0 0 18px;
+  }
+  .sys-metrics{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .sys-metric{
+    font-size:12px;
+    font-weight:500;
+    color:var(--gold);
+    display:flex;
+    gap:8px;
+  }
+  .sys-metric::before{
+    content:"\2736";
+    color:var(--gold);
+    font-size:8px;
+    flex-shrink:0;
+    margin-top:3px;
+  }
+  @media (max-width:900px){
+    .sys-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:700px){
+    .systems-section{padding:0 24px 72px;}
+    .sys-grid{grid-template-columns:1fr;}
+  }
+
+  .how-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .how-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0 0 30px;
+  }
+  .how-block{
+    background:var(--bg-soft);
+    border-radius:4px;
+    padding:48px;
+    border-left:4px solid var(--gold);
+  }
+  .how-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+  .how-grid-3{grid-template-columns:1fr 1fr 1fr;}
+  @media (max-width:900px){
+    .how-grid-3{grid-template-columns:1fr;}
+  }
+  .how-point h4{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold);
+    margin:0 0 8px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+  }
+  .how-point p{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    color:var(--text-dim);
+    line-height:1.7;
+    margin:0;
+  }
+  @media (max-width:700px){
+    .how-section{padding:0 24px 72px;}
+    .how-block{padding:28px;}
+    .how-grid{grid-template-columns:1fr;gap:28px;}
+  }
+
+  .ind-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .ind-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0 0 30px;
+  }
+  .ind-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  .ind-row{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    background:var(--bg-soft);
+    transition:background .2s;
+  }
+  .ind-row:hover{background:rgba(28,46,74,.9);}
+  .ind-name{
+    padding:18px 22px;
+    border-right:1px solid var(--line);
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:500;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+  }
+  .ind-type{
+    padding:18px 22px;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text-dim);
+    font-size:13px;
+    display:flex;
+    align-items:center;
+  }
+  @media (max-width:900px){
+    .ind-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:700px){
+    .ind-section{padding:0 24px 72px;}
+    .ind-row{grid-template-columns:140px 1fr;}
+    .ind-name,.ind-type{padding:14px 16px;}
+  }
+
+  .tools-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .tools-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0 0 30px;
+  }
+  .tools-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  .tool-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:18px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    transition:border-color .2s;
+  }
+  .tool-card:hover{border-color:rgba(196,151,74,.25);}
+  .tool-cat{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .tool-list{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:13px;
+    color:var(--text-dim);
+    line-height:1.5;
+  }
+  @media (max-width:900px){
+    .tools-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:700px){
+    .tools-section{padding:0 24px 72px;}
+    .tools-grid{grid-template-columns:1fr;}
+  }
+
+  .certs-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 48px 110px;
+  }
+  .certs-section h2{
+    font-size:2.6rem;
+    font-weight:400;
+    line-height:1.2;
+    margin:0 0 30px;
+  }
+  .certs-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .cert{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:13px;
+    transition:border-color .2s;
+  }
+  .cert:hover{border-color:rgba(196,151,74,.25);}
+  .cert-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gold);
+    flex-shrink:0;
+  }
+  @media (max-width:900px){
+    .certs-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:700px){
+    .certs-section{padding:0 24px 72px;}
+  }
+
+  .contact-section{
+    background:var(--bg-soft);
+    text-align:center;
+    padding:100px 48px 90px;
+  }
+  .contact-inner{max-width:560px;margin:0 auto;}
+  .contact-inner .eyebrow{justify-content:center;}
+  .contact-inner h2{
+    font-size:2.6rem;
+    font-weight:400;
+    margin:20px 0 30px;
+  }
+  .contact-inner h2 b{font-weight:700;}
+  .contact-inner p{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text-dim);
+    font-size:15px;
+    margin:0 0 8px;
+  }
+  .contact-links{
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    margin-top:36px;
+    flex-wrap:wrap;
+  }
+  .btn-gold{
+    background:var(--gold);
+    color:var(--bg);
+    padding:14px 30px;
+    border-radius:2px;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:.2s;
+    display:inline-block;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .btn-gold:hover{background:#d8b768;transform:translateY(-2px);}
+  .btn-ghost{
+    border:1px solid rgba(247,244,239,0.2);
+    color:var(--text);
+    padding:14px 30px;
+    border-radius:2px;
+    font-size:11px;
+    font-weight:400;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:.2s;
+    display:inline-block;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .btn-ghost:hover{border-color:var(--text);transform:translateY(-2px);}
+  .site-footer{
+    background:var(--bg);
+    border-top:1px solid var(--line);
+    text-align:center;
+    padding:22px;
+    font-size:12px;
+    color:var(--text-dim);
+    letter-spacing:.04em;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  @media (max-width:700px){
+    .contact-section{padding:64px 24px 56px;}
+    .contact-inner h2{font-size:2rem;}
+  }
+</style>
+
+<div class="nav">
+  <div class="brand">Natali Ghibradze</div>
+  <div class="links">
+    <a href="#about-me">About</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#systems">Systems</a>
+    <a href="#approach">Approach</a>
+    <a href="#industries">Industries</a>
+    <a href="#tools">Tools</a>
+    <a href="#about-me">About Me</a>
+    <a href="#contact">Contact</a>
   </div>
+  <a href="Natali_Ghibradze_Resume.pdf" target="_blank" class="resume-btn">Resume</a>
+</div>
 
-  <section class="hero">
-    <div class="hero-text">
-      <div class="eyebrow"><span class="rule"></span> Enterprise Customer Success Manager</div>
-      <h1 class="name">Natali<span class="last">Ghibradze</span></h1>
-      <div class="subline">Mid-Market &amp; Upmarket CSM &nbsp;·&nbsp; B2B &nbsp;·&nbsp; $1.5M ARR Portfolio</div>
-      <div class="subline langs">Europe + Eastern Europe &nbsp;·&nbsp; Trilingual: EN / RUS / ZH</div>
-      <div class="cta-row">
-        <a href="#case-studies" class="btn primary">View Case Studies</a>
-        <a href="#about-me" class="btn">About Me</a>
-        <a href="#contact" class="btn">Contact</a>
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow"><span class="rule"></span> Enterprise Customer Success Manager</div>
+    <h1 class="name">Natali<span class="last">Ghibradze</span></h1>
+    <div class="subline">Mid-Market &amp; Upmarket CSM &nbsp;·&nbsp; B2B &nbsp;·&nbsp; $1.5M ARR Portfolio</div>
+    <div class="subline langs">Europe + Eastern Europe &nbsp;·&nbsp; Trilingual: EN / RUS / ZH</div>
+    <div class="cta-row">
+      <a href="#case-studies" class="btn primary">View Case Studies</a>
+      <a href="#about-me" class="btn">About Me</a>
+      <a href="Natali_Ghibradze_Resume.pdf" target="_blank" class="btn">Download Resume</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="natali-photo.jpg" alt="Natali Ghibradze">
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <div class="stat-num">$1.5M</div>
+    <div class="stat-label">ARR Managed</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">50+</div>
+    <div class="stat-label">Key Accounts</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">&ge;95%</div>
+    <div class="stat-label">GRR Consec. Quarters</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">112%</div>
+    <div class="stat-label">Avg NRR &middot; 2026</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">5</div>
+    <div class="stat-label">Industry Verticals</div>
+  </div>
+</section>
+
+<section class="about" id="about-me">
+  <div class="eyebrow"><span class="rule"></span> Who I Am</div>
+  <h2>4+ Years in <b>Customer Success</b></h2>
+  <p>I started my career managing high-volume customer operations for a B2C e-commerce brand, resolving 50+ daily escalations across billing, product, and delivery friction. That foundation in rapid problem-solving and cross-functional coordination led me into SaaS Customer Success, where I found the work that fits me best: owning complex account lifecycles from onboarding through multi-year retention and expansion.</p>
+  <p>At Yoga Portal Online, I progressed into managing 40+ enterprise accounts in Salesforce, building early-warning retention frameworks that reduced potential churn by 10% before executive escalation. At Mason Veloria, I now manage 25&ndash;30 high-touch accounts across a key client portfolio, sustaining 97% retention and driving 110% Net Revenue Retention through proactive health scoring and strategic renewal planning.</p>
+  <p>What sets me apart is not just the account management. I build the systems: the health scoring workflow, the renewal pipeline framework, the onboarding process that accelerates time-to-value &mdash; everything I create gets documented and shared with the team. Good infrastructure should not live in one person&rsquo;s head.</p>
+  <div class="quote-block">
+    <p>&ldquo;I&rsquo;m always pushing to get better &mdash; at the work, at the relationships, at the systems behind it all.&rdquo;</p>
+    <div class="attribution">&mdash; Natali Ghibradze</div>
+  </div>
+</section>
+
+<section class="cards-section" id="highlights">
+  <div class="cards-grid">
+    <div class="card">
+      <span class="icon">🏢</span>
+      <h3>Account Ownership</h3>
+      <p>25&ndash;30 high-touch accounts across B2B and B2C portfolios. $1.5M+ total ARR under management. Full lifecycle ownership from onboarding through multi-year renewal and expansion.</p>
+    </div>
+    <div class="card">
+      <span class="icon">🌎</span>
+      <h3>Trilingual Coverage</h3>
+      <p>Fluent in English, Russian, and Chinese. Managed enterprise accounts across Europe and APAC markets, engaging customers in their native language to drive adoption and retention.</p>
+    </div>
+    <div class="card">
+      <span class="icon">📊</span>
+      <h3>Metrics That Show Expansion</h3>
+      <p>97% retention rate. 110% Net Revenue Retention at Mason Veloria. 35% increase in feature adoption through optimized onboarding. NRR above 100% means the base is growing, not just holding.</p>
+    </div>
+    <div class="card">
+      <span class="icon">⚡</span>
+      <h3>Builder Mentality</h3>
+      <p>I use Gainsight to track health scores and renewal risk &mdash; it&rsquo;s where I spot accounts before they slip. Claude to draft renewal playbooks and customer comms faster, then refine them myself. My AI-assisted workflow flags at-risk accounts early, cutting QBR prep time by 20%. Everything I build gets documented and shared, because good infrastructure should not live in one person&rsquo;s head.</p>
+    </div>
+    <div class="card">
+      <span class="icon">🏆</span>
+      <h3>Certified &amp; Building Expertise</h3>
+      <p>HubSpot Customer Success Certification. Pulse Academy CS courses. Salesforce Trailhead badges. Microsoft 365 Fundamentals. Final-year International Relations student &mdash; building both practical CS skills and strategic understanding of global markets.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section" id="case-studies">
+  <div class="eyebrow"><span class="rule"></span> Real Work Samples</div>
+  <h2>Case Studies</h2>
+  <div class="section-sub">Click any card to expand the full story.</div>
+
+  <details class="cs-card" open>
+    <summary>
+      <div>
+        <span class="cs-tag">ESCALATION</span>
+        <p class="cs-title">Wellness Tech &middot; Low Utilization &amp; Retention Crisis</p>
+      </div>
+      <span class="cs-toggle">+</span>
+    </summary>
+    <div class="cs-body">
+      <p>A corporate HR team flagged their subscription for cancellation &mdash; employee participation had dropped to 8%, and they couldn&rsquo;t justify the spend internally. I stepped in as the single point of contact, diagnosed usage patterns by country and class type, and coordinated a recovery plan with Operations, Product, and leadership. We rolled out country-specific class schedules, replaced underperforming instructors, and launched a targeted activation campaign &mdash; with weekly usage reports the HR team could use to demonstrate ROI.</p>
+      <ul class="cs-results">
+        <li>Participation increased from 8% &rarr; 20% within 60 days</li>
+        <li>Account retained at full contract value through renewal</li>
+        <li>HR received measurable proof of ROI to defend the spend internally</li>
+        <li>Recovery framework adopted for similar at-risk accounts in the portfolio</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="cs-card tag-blue">
+    <summary>
+      <div>
+        <span class="cs-tag tag-blue">PRODUCT</span>
+        <p class="cs-title">B2B SaaS &middot; Workflow Gap Driving Churn Risk</p>
+      </div>
+      <span class="cs-toggle">+</span>
+    </summary>
+    <div class="cs-body">
+      <p>A customer arranging international pet transportation was frustrated by the lack of visibility into documentation and travel readiness &mdash; they relied on manual emails to track what was complete. I mapped their full workflow, documented where the platform forced manual coordination, and brought it to Product and Operations with specific breakdown examples. I worked with Operations to create an interim transportation readiness checklist covering documentation, vet requirements, and airline specs &mdash; giving the customer clear visibility into what was outstanding. The customer stayed and renewed, and the workflow insight was pitched to Product as a scalable feature.</p>
+      <ul class="cs-results">
+        <li>Retained a $200K+ ARR account evaluating alternative transportation services</li>
+        <li>Interim readiness checklist deployed immediately for upcoming shipment</li>
+        <li>Customer renewed at full contract value with confidence restored</li>
+        <li>Workflow insight pitched to Product as a scalable feature for all international transportation accounts</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="cs-card tag-green">
+    <summary>
+      <div>
+        <span class="cs-tag tag-green">RENEWAL</span>
+        <p class="cs-title">Pet Logistics &middot; One-Off Failure to Scalable Fix</p>
+      </div>
+      <span class="cs-toggle">+</span>
+    </summary>
+    <div class="cs-body">
+      <p>An existing customer experienced repeated friction with international kitten transportation after a shipment was disrupted by an airline requirement and they struggled to get clear status updates. I mapped their journey from booking through departure, identified gaps in how requirements and status changes were communicated, and documented the recurring bottlenecks for Operations and Leadership. I introduced a standardized pre-travel checklist and single-point escalation process for complex shipments, giving customers clearer visibility into documentation, airline requirements, and departure readiness. The customer regained confidence and continued using transportation, while the updated process reduced similar friction for subsequent shipments.</p>
+      <ul class="cs-results">
+        <li>Retained a $75K ARR account following a high-impact international transportation disruption</li>
+        <li>Established a standardized pre-travel verification process covering documentation, airline requirements, and departure readiness</li>
+        <li>Introduced a single-point escalation workflow for complex shipments, improving visibility and reducing customer follow-up</li>
+        <li>Scaled the process across similar international transportation cases in partnership with Operations and Leadership</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="cs-card tag-purple">
+    <summary>
+      <div>
+        <span class="cs-tag tag-purple">QBR</span>
+        <p class="cs-title">PetTech Services &middot; Strategic QBR Driving Renewal + Expansion</p>
+      </div>
+      <span class="cs-toggle">+</span>
+    </summary>
+    <div class="cs-body">
+      <p>A cattery customer was up for renewal with healthy transportation usage but zero adoption of our nutrition consultation service. Instead of treating the QBR as a renewal formality, I reviewed their customer journey and discovered their team was fielding frequent post-placement feeding questions from kitten buyers &mdash; work our nutrition specialists could handle. I restructured the QBR around this untapped need, brought in the nutrition service lead, and proposed a 90-day pilot offering consultations to their recent customers. The pilot showed strong adoption, and the customer renewed their transportation contract while adding the nutrition service.</p>
+      <ul class="cs-results">
+        <li>Renewal closed with cross-service expansion into nutrition consultations &mdash; $30K+ in new ARR</li>
+        <li>90-day pilot converted into permanent contract addition</li>
+        <li>Account value increased, contributing to 110%+ NRR</li>
+        <li>QBR format adopted as a template for identifying expansion opportunities in other accounts</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="cs-card tag-gold">
+    <summary>
+      <div>
+        <span class="cs-tag tag-gold">ADOPTION</span>
+        <p class="cs-title">Yoga Portal Online &middot; 90-Day Onboarding &amp; Adoption Program</p>
+      </div>
+      <span class="cs-toggle">+</span>
+    </summary>
+    <div class="cs-body">
+      <p>A B2B/B2C Wellness Tech held a full license but was seeing low early engagement &mdash; users weren&rsquo;t activating key features within the first 30 days. I built a 90-day onboarding and adoption roadmap, mapping their user segments to specific features with milestones, success criteria, and owners on both sides. I optimized TTV tracking and surfaced adoption bottlenecks before they became escalation risks. In 90 days, early product engagement increased by 15%, and operational efficiency improved by 15% through streamlined account administration in Salesforce.</p>
+      <ul class="cs-results">
+        <li>Early product engagement increased by 15% in 90 days</li>
+        <li>Operational efficiency improved by 15% through streamlined Salesforce admin</li>
+        <li>97% CRM data accuracy maintained across 40+ accounts</li>
+        <li>Onboarding roadmap template adopted for similar mid-market accounts</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section class="systems-section" id="systems">
+  <div class="eyebrow"><span class="rule"></span> Process Innovation</div>
+  <h2>Systems Built</h2>
+  <div class="sys-grid">
+    <div class="sys-card">
+      <span class="sys-icon">&#9889;</span>
+      <h3>AI-Powered Weekly Account Intelligence</h3>
+      <p>I use Gainsight to track health scores and renewal risk, and Claude to draft renewal playbooks and customer comms faster &mdash; then I refine them myself. My AI-assisted workflow pulls from calendar, email, Slack, and Gainsight in one pass, flags action items, surfaces email-only catches missed by the CRM, scores urgency, and generates a refreshable account document 2&ndash;3 times per week.</p>
+      <div class="sys-metrics">
+        <div class="sys-metric">Cut weekly planning from 3+ hours down to under 30 minutes</div>
+        <div class="sys-metric">Haven&rsquo;t missed a single follow-up on flagged accounts since rolling this out</div>
+        <div class="sys-metric">QBR prep time cut by 20% through early at-risk account flagging</div>
+        <div class="sys-metric">Workflow documented and shared with the team for adoption</div>
       </div>
     </div>
-    <div class="hero-photo" onclick="openModal()">
-      <img id="profile-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAADhKADAAQAAAABAAADWQAAAAD/wAARCANZA4QDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwACAgICAgIDAgIDBAMDAwQFBAQEBAUGBQUFBQUGCAYGBgYGBggICAgICAgICQkJCQkJCwsLCwsMDAwMDAwMDAwM/9sAQwECAgIDAwMFAwMFDAgHCAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/9sAQwAIBgYCAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgA3gCWAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNRcksV4QYnJgAL/aAAw0A21JQI/4m4N3M3M1N1f/aAAgBAQABPxA=" alt="Natali Ghibradze">
+    <div class="sys-card">
+      <span class="sys-icon">&#128202;</span>
+      <h3>Quarterly Renewal Pipeline Framework</h3>
+      <p>I map every renewal in the next 90 days against account health, adoption data, and recent communication history in Salesforce. Each gets a risk tier (Critical, High, Watch, On Track) and a tailored action plan that feeds directly into leadership reviews. I deliver weekly renewal forecasts with actionable insights, cutting reporting discrepancies by 15% and reducing account preparation time by 20%.</p>
+      <div class="sys-metrics">
+        <div class="sys-metric">Now tracking renewals 90 days out instead of 30 &mdash; way more runway to intervene</div>
+        <div class="sys-metric">Risk tiering became a standard part of how we plan each quarter</div>
+        <div class="sys-metric">Cut manager review prep from an hour down to 15 minutes</div>
+        <div class="sys-metric">Keeping 97% data accuracy across all renewal pipelines in Salesforce</div>
+      </div>
     </div>
-  </section>
-
-  <section id="about-me" class="about">
-    <h2>About <b>Natali</b></h2>
-    <p>Strategic Customer Success Manager driving retention and revenue growth...</p>
-  </section>
-
-  <section id="case-studies" class="cs-section">
-    <h2>Case Studies</h2>
-  </section>
-
-  <section id="systems" class="systems-section">
-    <h2>Systems &amp; Playbooks</h2>
-  </section>
-
-  <section id="approach" class="how-section">
-    <h2>Approach</h2>
-  </section>
-
-  <section id="industries" class="ind-section">
-    <h2>Industries</h2>
-  </section>
-
-  <section id="tools" class="tools-section">
-    <h2>Tools</h2>
-  </section>
-
-  <section id="contact" class="contact-section">
-    <div class="contact-inner">
-      <h2>Get in <b>Touch</b></h2>
-      <p>Open for Enterprise CSM positions.</p>
+    <div class="sys-card">
+      <span class="sys-icon">&#128227;</span>
+      <h3>Product Update Communication Workflow</h3>
+      <p>I convert raw release notes into plain-language customer summaries, talking points by customer segment, and anticipated Q&amp;A. For strategic accounts, I also generate a branded slide deck for the next cadence call. I&rsquo;ve authored standardized FAQ templates and support macros that expand self-service capabilities and reduce repetitive ticket volume by 20%.</p>
+      <div class="sys-metrics">
+        <div class="sys-metric">Product update prep: 2 hours reduced to 20 minutes</div>
+        <div class="sys-metric">Consistent communications across all 25&ndash;30 high-touch accounts</div>
+        <div class="sys-metric">Fewer inbound &ldquo;what does this mean&rdquo; tickets after releases</div>
+        <div class="sys-metric">Feature adoption accelerated by 35% through clearer onboarding comms</div>
+      </div>
     </div>
-  </section>
-
-  <!-- Image Lightbox Modal -->
-  <div id="imgModal" class="modal" onclick="closeModal()">
-    <img id="modalImg" src="" alt="Expanded View">
   </div>
+</section>
 
-  <script>
-    function openModal() {
-      const src = document.getElementById('profile-img').src;
-      document.getElementById('modalImg').src = src;
-      document.getElementById('imgModal').style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('imgModal').style.display = 'none';
-    }
-  </script>
+<section class="how-section" id="approach">
+  <div class="eyebrow"><span class="rule"></span> Operating Philosophy</div>
+  <h2>How I Work</h2>
+  <div class="how-block">
+    <div class="how-grid">
+      <div class="how-point">
+        <h4>Proactive by Default</h4>
+        <p>I don&rsquo;t wait for renewal dates to have strategic conversations or for tickets to surface before checking on flagged accounts. I run weekly health score reviews across my 25&ndash;30 accounts and act on anything that needs attention before it becomes an escalation &mdash; this approach reduced quarterly churn risk by 15% prior to executive involvement.</p>
+      </div>
+      <div class="how-point">
+        <h4>Prepared for Every Conversation</h4>
+        <p>Every customer meeting gets a 30-day lookback: what was discussed, what was promised, what changed. I bring specific talking points and usage data. When a QBR is on the calendar, I align with leadership on goals, metrics, and next steps before we walk in the room.</p>
+      </div>
+      <div class="how-point">
+        <h4>Own the Escalation</h4>
+        <p>When something goes wrong, I own it end to end. I&rsquo;ve built cross-functional escalation pathways that reduce time-to-resolution by 25%, keep all stakeholders aligned, and stay in the conversation until the issue is resolved &mdash; with a written summary to the customer on what happened and what changed.</p>
+      </div>
+      <div class="how-point">
+        <h4>Build and Share</h4>
+        <p>Every process, template, and workflow I create is documented and available to the team. I authored standardized FAQ templates and support macros that reduced repetitive ticket volume by 20%. Good systems should not live in one person&rsquo;s head &mdash; I build to scale, not to protect territory.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="ind-section" id="industries">
+  <div class="eyebrow"><span class="rule"></span> Portfolio Coverage</div>
+  <h2>Industries Served</h2>
+  <div class="ind-grid">
+    <div class="ind-row">
+      <div class="ind-name">Financial Services</div>
+      <div class="ind-type">Banks, investment firms, financial institutions (including international clients across Central Asia)</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-name">Marketing &amp; Advertising</div>
+      <div class="ind-type">Digital marketing agencies, brand studios</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-name">Real Estate</div>
+      <div class="ind-type">Property management firms, real estate development companies</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-name">Software &amp; Technology</div>
+      <div class="ind-type">B2B SaaS platforms, tech startups</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-name">Beauty &amp; Personal Care</div>
+      <div class="ind-type">Beauty retailers, personal care brands</div>
+    </div>
+  </div>
+</section>
+
+<section class="tools-section" id="tools">
+  <div class="eyebrow"><span class="rule"></span> Tech Stack</div>
+  <h2>Tools &amp; Platforms</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="tool-cat">CS Platform</div>
+      <div class="tool-list">Gainsight &mdash; health scores, CTAs, success plans, renewal tracking, NRR/GRR reporting</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-cat">CRM</div>
+      <div class="tool-list">Salesforce, HubSpot &mdash; opportunity tracking, renewal pipeline, account hierarchy, deal management</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-cat">Communication</div>
+      <div class="tool-list">Slack, Microsoft Outlook, Microsoft Teams, Zoom, Google Meet</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-cat">Collaboration</div>
+      <div class="tool-list">Microsoft 365, Notion, Jira, SharePoint</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-cat">Presentation</div>
+      <div class="tool-list">PowerPoint, Google Slides, Loom</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-cat">AI &amp; Automation</div>
+      <div class="tool-list">Claude Code, Google Antigravity, NotebookLM, Liftoff, Gemini, Perplexity</div>
+    </div>
+  </div>
+</section>
+
+<section class="certs-section" id="credentials">
+  <div class="eyebrow"><span class="rule"></span> Credentials</div>
+  <h2>Certifications &amp; Education</h2>
+  <div class="certs-grid">
+    <div class="cert"><span class="cert-dot"></span>Cisco Customer Success Specialist</div>
+    <div class="cert"><span class="cert-dot"></span>HubSpot Academy &mdash; Customer Success Certification</div>
+    <div class="cert"><span class="cert-dot"></span>Aspireship &mdash; CSM Certification</div>
+    <div class="cert"><span class="cert-dot"></span>Gainsight &mdash; Customer Success Certification</div>
+    <div class="cert"><span class="cert-dot"></span>CustomerSuccessU Certification</div>
+    <div class="cert"><span class="cert-dot"></span>Certified Customer Success Manager Practitioner (CCSMP)</div>
+    <div class="cert"><span class="cert-dot"></span>Microsoft Certified: Microsoft 365 Fundamentals</div>
+    <div class="cert"><span class="cert-dot"></span>Gainsight &mdash; End-User Certification</div>
+    <div class="cert"><span class="cert-dot"></span>Final-Year International Relations Student</div>
+  </div>
+</section>
+
+<section class="how-section" id="beyond-the-work">
+  <div class="eyebrow"><span class="rule"></span> Beyond the Work</div>
+  <h2>A Bit About Me</h2>
+  <div class="how-block">
+    <div class="how-grid how-grid-3">
+      <div class="how-point">
+        <h4>&#127757; From Georgia to the World</h4>
+        <p>Born and raised in Eastern Europe, I grew up between cultures &mdash; Georgian on my mother&rsquo;s side, Ukrainian &amp; Russian on my father&rsquo;s side. English, Georgian, Russian, and Chinese did not come from a classroom alone &mdash; they came from real relationships and real adaptation.</p>
+      </div>
+      <div class="how-point">
+        <h4>&#127939; Staying Active</h4>
+        <p>Sports is a consistent part of my routine. Managing 40+ enterprise accounts across multiple industries requires consistent energy and focus. Staying physically active is helpful for mental health and daily job too. I started figure skating at three years old and competed for over a decade. Fitness remains a consistent part of my routine.</p>
+      </div>
+      <div class="how-point">
+        <h4>&#128161; Adaptability at Heart</h4>
+        <p>Outside of work, I mastered Mandarin, passing the HSK 4 and HSKK 4 (Chinese B1) exams while preparing to study abroad in China, before pivoting under COVID-19 &mdash; a shift that shaped the adaptability I bring to every account I manage today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="eyebrow"><span class="rule"></span> Get In Touch</div>
+    <h2>Let&rsquo;s <b>Connect</b></h2>
+    <p>Open to Enterprise CSM &amp; CSM opportunities. Remote preferred.</p>
+    <p>Europe &nbsp;&middot;&nbsp; Timezone-aligned with EU, UAE &amp; Asia (UTC+4)</p>
+    <div class="contact-links">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=natgibradze@gmail.com" target="_blank" class="btn-gold">natgibradze@gmail.com</a>
+      <a href="https://www.linkedin.com/in/natali-ghibradze/" target="_blank" class="btn-ghost">LinkedIn &rarr;</a>
+      <a href="Natali_Ghibradze_Resume.pdf" target="_blank" class="btn-ghost">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">&copy; 2026 Natali Ghibradze &nbsp;&middot;&nbsp; Enterprise Customer Success Manager</footer>
 </body>
 </html>
