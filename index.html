@@ -41,6 +41,10 @@
     padding:24px 48px;
     border-bottom:1px solid var(--line);
     font-family:Arial,Helvetica,sans-serif;
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    z-index:150;
   }
   .nav .brand{
     font-family:'Georgia',serif;
@@ -55,8 +59,28 @@
     text-transform:uppercase;
     color:var(--text-dim);
   }
-  .nav .links a{color:var(--text-dim);text-decoration:none;}
+  .nav .links a{color:var(--text-dim);text-decoration:none;position:relative;padding-bottom:4px;}
   .nav .links a:hover{color:var(--gold);}
+  .nav .links a.active{color:var(--gold);}
+  .nav .links a.active::after{
+    content:"";
+    position:absolute;
+    bottom:-2px;
+    left:0;
+    right:0;
+    height:2px;
+    background:var(--gold);
+    border-radius:1px;
+  }
+  #progress-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:3px;
+    background:var(--gold);
+    z-index:200;
+    width:0%;
+  }
   .nav .resume-btn{
     background:var(--gold);
     color:#1a1408;
@@ -737,16 +761,16 @@
   }
 </style>
 
+<div id="progress-bar"></div>
 <div class="nav">
   <div class="brand">Natali Ghibradze</div>
   <div class="links">
-    <a href="#about-me">About</a>
+    <a href="#about-me">About Me</a>
     <a href="#case-studies">Case Studies</a>
     <a href="#systems">Systems</a>
     <a href="#approach">Approach</a>
     <a href="#industries">Industries</a>
     <a href="#tools">Tools</a>
-    <a href="#about-me">About Me</a>
     <a href="#contact">Contact</a>
   </div>
   <a href="Natali_Ghibradze_Resume.pdf" target="_blank" class="resume-btn">Resume</a>
@@ -839,7 +863,7 @@
   <h2>Case Studies</h2>
   <div class="section-sub">Click any card to expand the full story.</div>
 
-  <details class="cs-card" open>
+  <details class="cs-card">
     <summary>
       <div>
         <span class="cs-tag">ESCALATION</span>
@@ -1110,5 +1134,61 @@
 </section>
 
 <footer class="site-footer">&copy; 2026 Natali Ghibradze &nbsp;&middot;&nbsp; Enterprise Customer Success Manager</footer>
+<script>
+(function(){
+  var bar = document.getElementById('progress-bar');
+  function updateProgress(){
+    var h = document.documentElement;
+    var scrollTop = h.scrollTop || document.body.scrollTop;
+    var scrollHeight = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+  }
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav .links a[href^="#"]'));
+  var sections = navLinks
+    .map(function(a){
+      var id = a.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      return el ? {id: id, el: el} : null;
+    })
+    .filter(Boolean);
+  // de-duplicate sections by id
+  var seen = {};
+  sections = sections.filter(function(s){
+    if (seen[s.id]) return false;
+    seen[s.id] = true;
+    return true;
+  });
+
+  function updateActive(){
+    var probe = window.scrollY + window.innerHeight * 0.3;
+    var currentId = sections.length ? sections[0].id : null;
+    for (var i = 0; i < sections.length; i++){
+      if (sections[i].el.offsetTop <= probe) currentId = sections[i].id;
+    }
+    navLinks.forEach(function(a){
+      var id = a.getAttribute('href').slice(1);
+      a.classList.toggle('active', id === currentId);
+    });
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if (!ticking){
+      window.requestAnimationFrame(function(){
+        updateProgress();
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+</script>
 </body>
 </html>
