@@ -1167,6 +1167,8 @@
     for (var i = 0; i < sections.length; i++){
       if (sections[i].el.offsetTop <= probe) currentId = sections[i].id;
     }
+    var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    if (atBottom && sections.length) currentId = sections[sections.length - 1].id;
     navLinks.forEach(function(a){
       var id = a.getAttribute('href').slice(1);
       a.classList.toggle('active', id === currentId);
